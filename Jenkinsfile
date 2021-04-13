@@ -13,8 +13,8 @@ podTemplate(
   ) {
 properties([
   parameters([
-    string(name: 'image-tag', defaultValue: '', description: 'Select the branch to build. DEFAULT empty'),
-    string(name: 'image-repo', defaultValue: 'us.gcr.io/pypestream/json-to-yaml', description: 'Enter image repository url to push image. REQUIRED')
+    string(name: 'IMAGE_TAG', defaultValue: '', description: 'Select the branch to build. DEFAULT empty'),
+    string(name: 'IMAGE_REPO', defaultValue: 'us.gcr.io/pypestream/json-to-yaml', description: 'Enter image repository url to push image. REQUIRED')
   ])
 ])
 
