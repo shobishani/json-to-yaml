@@ -1,0 +1,6 @@
+apiVersion: v2
+name: json-to-yaml
+description: A Helm chart for Kubernetes for the python service json-to-yaml file
+type: application
+version: 0.1.0
+appVersion: 0.0.1

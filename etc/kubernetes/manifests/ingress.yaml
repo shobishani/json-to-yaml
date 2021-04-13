@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: json-to-yaml
+  labels:
+    app.kubernetes.io/name: json-to-yaml
+    app.kubernetes.io/instance: json-to-yaml
+    app.kubernetes.io/version: "0.0.1"
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  tls:
+    - hosts:
+        - "toyaml.pypestream.com"
+      secretName: toyaml-pypestream-com-tls
+  rules:
+    - host: "toyaml.pypestream.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: json-to-yaml
+              servicePort: 5000

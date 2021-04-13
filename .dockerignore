@@ -1,0 +1,6 @@
+etc/kubernetes
+
+Dockerfile
+.git
+.gitignore
+*.tgz
